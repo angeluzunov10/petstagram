@@ -2,4 +2,8 @@
 
 This is a Django project named "Petstagram".
 
-In this app users can add pets to their profiles, upload photos of their pets, and explore a collective display of all pet photos. Additionally, users can delve into photo details, express likes and provide comments. The functionality extends to enabling users to edit and delete their uploadedphotos and pet information.
+The project will encompass key functionalities, including user registration, login and logout features. Each registered user will have the ability to add pets to their profile and upload captivating photos of their pets.
+
+The platform will offer users the option to view a collective gallery of all pet photos, enabling them to explore and engage with the vibrant pet community. Users can open detailed views of individual photos, express their appreciation by liking them and share their thoughts through comments.
+
+To ensure a personalized experience, each user retains the capability to manage their uploaded content. This includes the ability to edit and delete both photos and associated pet information. The Petstagram project aims to provide a seamless and enjoyable environment for pet enthusiasts to connect, share, and celebrate their beloved companions
