@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
+from petstagram.photos.forms import PhotoAddForm
 from petstagram.photos.models import Photo
 
 
@@ -7,7 +8,18 @@ from petstagram.photos.models import Photo
 
 
 def photo_add_page(request):
-    return render(request, 'photos/photo-add-page.html')
+    form = PhotoAddForm(request.POST or None, request.FILES or None)
+
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+
+    context = {
+        "form": form,
+    }
+
+    return render(request, 'photos/photo-add-page.html', context)
 
 
 def photo_edit_page(request, pk):
