@@ -1,7 +1,6 @@
 from django.shortcuts import render
 
 from petstagram.pets.models import Pet
-from petstagram.photos.models import Photo
 
 
 # Create your views here.
