@@ -8,8 +8,8 @@ from petstagram.photos.models import Photo
 
 class Comment(models.Model):
     class Meta:
-        index = [
-            models.Index('date_time_of_publication')
+        indexes = [
+            models.Index(fields=['date_time_of_publication']),
         ]
         ordering = ['-date_time_of_publication']
 
