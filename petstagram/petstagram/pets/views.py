@@ -1,5 +1,9 @@
 from django.shortcuts import render
 
+from petstagram.pets.models import Pet
+from petstagram.photos.models import Photo
+
+
 # Create your views here.
 
 
@@ -16,4 +20,12 @@ def pet_delete_page(request, username, pet_slug):
 
 
 def pet_details_page(request, username, pet_slug):
-    return render(request, 'pets/pet-details-page.html')
+    pet = Pet.objects.get(slug=pet_slug)
+    all_photos = pet.photo_set.all()
+
+    context = {
+        'pet': pet,
+        'all_photos': all_photos,
+    }
+
+    return render(request, 'pets/pet-details-page.html', context)
